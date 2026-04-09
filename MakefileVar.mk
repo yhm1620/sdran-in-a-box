@@ -21,10 +21,10 @@ HTTPS_PROXY						?= ${https_proxy}
 NO_PROXY						?= ${no_proxy}
 
 # Commit IDs
-AETHERCHARTCID-V1.0.0			?= 1.4.0
-AETHERCHARTCID-V1.3.0			?= 1.4.0
-AETHERCHARTCID-V1.4.0			?= 1.4.0
-AETHERCHARTCID-LATEST			?= 1.4.0
+AETHERCHARTCID-V1.0.0			?= origin/main
+AETHERCHARTCID-V1.3.0			?= origin/main
+AETHERCHARTCID-V1.4.0			?= origin/main
+AETHERCHARTCID-LATEST			?= origin/main
 SDRANCHARTCID-LATEST			?= origin/master
 SDRANCHARTCID-E2AP101-LATEST	?= origin/e2ap101
 SDRANCHARTCID-E2AP101-V1.3.0	?= sd-ran-1.2.129

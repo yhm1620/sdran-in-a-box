@@ -62,7 +62,7 @@ $(M)/repos: | $(M)
 	mkdir -p $(CHARTDIR)
 	cd $(CHARTDIR)
 	@if [[ ! -d "$(AETHERCHARTDIR)" ]]; then \
-                echo "aether-helm-chart repo is not in $(CHARTDIR) directory. Start to clone - it requires HTTPS key"; \
+                echo "sdcore-helm-chart repo is not in $(CHARTDIR) directory. Start to clone - it requires HTTPS key"; \
 				git clone $(CORD_GERRIT_URL) $(AETHERCHARTDIR) || true; \
 	fi
 	@if [[ ! -d "$(SDRANCHARTDIR)" ]]; then \

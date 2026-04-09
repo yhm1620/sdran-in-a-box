@@ -12,8 +12,9 @@ $(M)/omec: | version $(M)/helm-ready $(M)/fabric
 	sudo sysctl -w fs.inotify.max_user_instances=1024
 	kubectl get namespace $(RIAB_NAMESPACE) 2> /dev/null || kubectl create namespace $(RIAB_NAMESPACE)
 	helm repo update
+	helm dep up $(AETHERCHARTDIR)/omec-control-plane
 	helm dep up $(AETHERCHARTDIR)/sdcore-helm-charts
-	helm upgrade --install $(HELM_ARGS) \
+	helm upgrade --install \
 		--namespace $(RIAB_NAMESPACE) \
 		--values $(HELM_VALUES) \
 		--set omec-control-plane.config.spgwc.cfgFiles.cp.json.ip_pool_config.ueIpPool.ip=$(UE_IP_POOL) \
